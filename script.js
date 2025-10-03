@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     // Select the form and feedback elements
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
 
     // Add a 'submit' event listener to the form
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', function(event) {
         // Prevent the default form submission
         event.preventDefault();
 
@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isValid) {
             // If all validations pass
             feedbackDiv.textContent = 'Registration successful!';
-            feedbackDiv.style.color = '#28a745'; // Green for success
-            feedbackDiv.style.backgroundColor = '#d4edda'; // Light green background
+            feedbackDiv.style.color = '#28a745';
+            feedbackDiv.style.backgroundColor = '#d4edda';
         } else {
             // If there are validation errors
             feedbackDiv.innerHTML = messages.join('<br>');
-            feedbackDiv.style.color = '#dc3545'; // Red for error
-            feedbackDiv.style.backgroundColor = '#f8d7da'; // Light red background
+            feedbackDiv.style.color = '#dc3545';
+            feedbackDiv.style.backgroundColor = '#f8d7da';
         }
     });
 }); 
